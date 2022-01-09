@@ -156,3 +156,177 @@
 //       total+=i;
 //  }
 //      console.log('total:',total);
+
+// const a=['Mango','Kiwi','Poly','Ajax',2,3,4,5];
+// console.table(a);
+// const lastIndex=a.length-1;
+// console.log(lastIndex);
+
+// const a=['Mango','Kiwi','Poly','Ajax',2,3,4,5];
+// const lastIndex=a.length-1;
+// for (let i=0;i<=lastIndex;i+=1) {
+//   a[i]+='-1'; 
+// }
+// console.table(a);
+
+// const a=['Mango','Kiwi','Poly','Ajax',2,3,4,5];
+// for (const b of a) {
+// console.table(b);
+// }
+
+// const cart=[54,28,105,70,92,17,120,35];
+// let total=0;
+// for (let i=0;i<cart.length;i+=1) {
+//     total+=cart[i];
+// }
+// console.log('Total',total);
+
+// ИЛИ
+
+// const cart=[54,28,105,70,92,17,120,35];
+// let total=0;
+// for (const value of cart) {
+//     total+=value;
+// }
+// console.log('Total',total);
+
+// Сумма всех четных элементов в массиве
+// const numbers=[1,5,8,9,12,4,15,27,30,18,14];
+// let total=0;
+// for (const number of numbers) {
+//     if (number%2===0) {
+//     console.log(`${number}-четное!`);
+//     total+=number;
+//      }
+// }
+// console.log('Total',total);
+
+// Поиск логина
+// const logins=['a','b','c','d','e'];
+// const loginTofind='z';
+// let message=`Пользователь ${loginTofind} не найден`;
+// for (const login of logins) {
+//         if (login===loginTofind) {
+//         message=`Пользователь ${loginTofind} найден`;
+//         break;
+//     }
+//    }
+// console.log(message);
+// С помощью includes
+// const logins=['a','b','c','d','e'];
+// const loginTofind='b';
+// const message=logins.includes(loginTofind)
+//     ?`Пользователь ${loginTofind} найден.`
+//     :`Пользователь ${loginTofind} не найден.`;
+//     console.log(message);
+
+// Поиск самого маленького числа,которое не повторяется
+// const numbers=[51,18,13,24,7,85,19,3];
+// let smallestNumber=numbers[0];
+// for (const number of numbers) {
+//     if (number<smallestNumber) {
+//         smallestNumber=number;
+// }
+// }
+// console.log('smallestNumber',smallestNumber);
+
+// Поиск самого большого числа,которое не повторяется
+// const numbers=[51,18,13,24,7,85,19,3,100];
+// let biggestNumber=numbers[0];
+// for (const number of numbers) {
+//     if (number>biggestNumber) {
+//         biggestNumber=number;
+// }
+// }
+// console.log('biggestNumber',biggestNumber);
+
+// Обьединяет все элементы массива в одно строковое значение
+// const friends=['Mango','Poly','Kiwi','Ajax'];
+// let string='';
+// for (const friend of friends) {
+//     string+=friend+',';
+// }
+// string=string.slice(0,string.length-1);
+// console.log(string);
+// То же самое через join
+// const friends=['Mango','Poly','Kiwi','Ajax'];
+// const string=friends.join(',');
+// console.log(string);
+
+// Замена регистра каждого символа в строке на противоположный
+// const string='JavaScript';
+// const letters=string.split('');
+// let invertedString='';
+// console.log(letters);
+// for (const letter of letters) {
+//     console.log(letter);
+//     if (letter===letter.toLowerCase()) {
+//         console.log('Эта буква в нижнем регистре!-',letter);
+//         invertedString+=letter.toUpperCase();
+//     } else {
+//         console.log('Эта буква в верхнем регистре!-',letter);
+//         invertedString+=letter.toLowerCase();
+//     }
+// }
+// console.log(invertedString);
+// То же самое
+//  const string='JavaScriptfggKJHKn';
+//  const letters=string.split('');
+//  let invertedString='';
+//  console.log(letters);
+//  for (const letter of letters) {
+//          console.log(letter);
+//         invertedString += letter === letter.toLowerCase()
+//         ? letter.toLocaleUpperCase()
+//         : letter.toLocaleLowerCase();
+//         }
+//         console.log(invertedString);
+
+// Сделать из  строки слак
+// const title='Top 10 benefits of React framework';
+// const normalizedTitle=title.toLowerCase();
+// console.log(normalizedTitle);
+// const words=normalizedTitle.split(' ');
+// console.log(words);
+// const slug=words.join('-');
+// console.log(slug);
+// То же самое
+// const title='Top 10 benefits of React framework';
+// const slug=title.toLocaleLowerCase().split(' ').join('-');
+// console.log(slug);
+
+// Сумма элементов 2-х массивов
+// const array1=[5,10,15,20];
+// const array2=[10,20,30];
+// let total=0;
+// const numbers=array1.concat(array2);
+// for (const number of numbers) {
+// total+=number;
+// }
+// console.log(total);
+
+// Работа с trello,метод splice
+const cards = [
+    'Карточка-1',
+    'Карточка-2',
+    'Карточка-3',
+    'Карточка-4',
+    'Карточка-5',
+];
+console.table(cards);
+// const cardToRemove='Карточка-3';
+// const index=cards.indexOf(cardToRemove);
+// console.log(index);
+// cards.splice(index,1);
+// console.table(cards);
+
+// Добавление по индексу
+// const cardToInsert='Карточка-6';
+// const index=1;
+// cards.splice(index,0,cardToInsert);
+// console.table(cards);
+
+// Обновление по индексу
+const cardToUpdate='Карточка-4';
+cards.splice(3,1,cardToUpdate);
+console.table(cards);
