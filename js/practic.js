@@ -52,7 +52,7 @@
 //         console.log('Уровень3');
 //     }   else {
 //         console.log('Уровень4');
-//     } 
+//     }
 //     console.log('Говно');
 
 
@@ -80,7 +80,7 @@
 //     discount=0.02;
 // } else if (totalSpent>=1000 && totalSpent<5000) {
 //     console.log('Серебрянный партнер,скидка 5%');
-//     discount=0.05; 
+//     discount=0.05;
 // } else if (totalSpent>=5000) {
 //     console.log('Золотой партнер,скидка 10%');
 //     discount=0.1;
@@ -165,7 +165,7 @@
 // const a=['Mango','Kiwi','Poly','Ajax',2,3,4,5];
 // const lastIndex=a.length-1;
 // for (let i=0;i<=lastIndex;i+=1) {
-//   a[i]+='-1'; 
+//   a[i]+='-1';
 // }
 // console.table(a);
 
@@ -306,14 +306,14 @@
 // console.log(total);
 
 // Работа с trello,метод splice
-const cards = [
-    'Карточка-1',
-    'Карточка-2',
-    'Карточка-3',
-    'Карточка-4',
-    'Карточка-5',
-];
-console.table(cards);
+// const cards = [
+//     'Карточка-1',
+//     'Карточка-2',
+//     'Карточка-3',
+//     'Карточка-4',
+//     'Карточка-5',
+// ];
+// console.table(cards);
 // const cardToRemove='Карточка-3';
 // const index=cards.indexOf(cardToRemove);
 // console.log(index);
@@ -327,6 +327,56 @@ console.table(cards);
 // console.table(cards);
 
 // Обновление по индексу
-const cardToUpdate='Карточка-4';
-cards.splice(3,1,cardToUpdate);
-console.table(cards);
+// const cardToUpdate='Карточка-4';
+// cards.splice(3,1,cardToUpdate);
+// console.table(cards);
+
+// ФУНКЦИИ
+ 
+// const fn = function (value) {
+//   console.log(1);
+//   console.log(2);
+//   if (value < 50) {
+//     return 'Меньше чем 50';
+//   }
+//   return 'Больше чем 50';
+// }
+// console.log('Результат функции:', fn(10));
+// console.log('Результат функции:',fn(1000));
+
+// К задаче на 186 стороке
+// const calculateTotalPrice = function (items) {
+//   console.log('items внутри функции:', items);
+//   let total = 0;
+//   for (const item of items) {
+//     total += item;
+//    }
+//   return total;
+// }
+// const r1 = calculateTotalPrice([1, 2, 3]);
+// console.log(`Общая сумма покупок ${ r1 }`);
+// console.log(calculateTotalPrice([5, 10, 15, 20]));
+// console.log(calculateTotalPrice([100, 200, 300]));
+
+// Функция для перебора и логирования массива без ретерна
+// const logItems = function (items) {
+//   for (const item of items) {
+//     console.log(item);
+//   }
+// }
+// logItems(['Mongo', 'Kiwi', 'Poly', 'Ajax']);
+// logItems([1, 2, 3, 4, 5]);
+// logItems(['клавиатура','наушники','часы']);
+
+// К задаче на 215 стороке
+const logins = ['a','z','c','y'];
+const findLogin = function (allLogins, loginToFind) {
+  const message = allLogins.includes(loginToFind)
+    ? `Пользователь ${loginToFind} найден`
+    : `Пользователь ${loginToFind} не найден`;
+  return message;
+}
+console.log(findLogin(logins, 'a'));
+console.log(findLogin(logins, 'b'));
+console.log(findLogin(logins, 'c'));
+console.log(findLogin(logins,'d'));

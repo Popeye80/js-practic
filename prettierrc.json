@@ -9,5 +9,6 @@
     "jsxBtacketSameLine": false,
     "arrowParens": "avoid",
     "proseWrap": "always"
+    
  
 }
