@@ -369,14 +369,103 @@
 // logItems(['клавиатура','наушники','часы']);
 
 // К задаче на 215 стороке
-const logins = ['a','z','c','y'];
-const findLogin = function (allLogins, loginToFind) {
-  const message = allLogins.includes(loginToFind)
-    ? `Пользователь ${loginToFind} найден`
-    : `Пользователь ${loginToFind} не найден`;
-  return message;
+// const logins = ['m4ngoDoge','k1widab3t','poly1scute','aj4xth3m4n'];
+// const findLogin = function (allLogins, loginToFind) {
+//   return  allLogins.includes(loginToFind)
+//     ? `Пользователь ${loginToFind} найден`
+//     : `Пользователь ${loginToFind} не найден`;
+  
+// }
+// console.log(findLogin(logins, 'avocod3r'));
+// console.log(findLogin(logins, 'k1widab3t'));
+// console.log(findLogin(logins, 'jam4l'));
+// console.log(findLogin(logins,'poly1scute'));
+
+// К задаче на 223 стороке
+// const findSmallesNumber = function (numbers) {
+//   let smallestNumber = numbers[0];
+//   for (const number of numbers) {
+//     if (number < smallestNumber) {
+//       smallestNumber = number;
+//     }
+//   }
+//   return smallestNumber;
+// }
+// console.log(findSmallesNumber([3, 8, 12, -2, 15]));
+// console.log(findSmallesNumber([100, 54, 8, 12, 47]));
+// console.log(findSmallesNumber([7, 21, 84, 15, 4]));
+
+// К задаче на 257,272 стороке
+// const changeCase = function (string) {
+//   const letters = string.split('');
+//   let invertedString = '';
+
+//   for (const letter of letters) {
+//     const isInLowerCase = letter === letter.toLowerCase();
+//     invertedString += isInLowerCase ? letter.toUpperCase()
+//       : letter.toLowerCase();
+//   }
+
+//   return invertedString;
+// }
+
+// console.log(changeCase('qweRTY'));
+// console.log(changeCase('mAnGo'));
+// console.log(changeCase('AjAx'));
+
+// К задаче на 286,294 стороке
+// const slugify = function (string) {
+//   return string.toLowerCase().split(' ').join('-');
+// }
+// console.log(slugify('Top 10 benefits of React framework'));
+// console.log(slugify('Azure Static Web Apps are Awesome'));
+// console.log(slugify('Technical writting tips for non-native English speakers'));
+
+// Полноценный массив (старый метод)
+// const fn = function () {
+//   console.log(arguments);
+//   const args = Array.from(arguments);
+//   console.log(args);
+// }
+
+// fn(1, 2, 3);
+// fn(1, 2, 3, 4, 5);
+// fn(1, 2, 3, 4, 5, 6, 7);
+
+// Полноценный массив (новый метод)
+// const fn = function (...args) {
+//   console.log(args);
+// }
+// fn(1, 2, 3);
+// fn(1, 2, 3, 4, 5);
+// fn(1, 2, 3, 4, 5, 6, 7);
+
+// Функция для сложения произвольного колличества элементов
+// const add = function (...args) {
+//   console.log(args);
+//   let total = 0;
+//   for (const arg of args) {
+//     total += arg;
+//   }
+//   return total;
+// }
+// console.log(add(1, 2, 3));
+// console.log(add(1,2,3,4,5));
+
+// Функция,которая первым аргументом принимает массив чисел,после первого аргумента может быть произвольное колличество других аргументов,которые будут числами. Функция должна вернуть новый массив,в котором будут только те аргументы,начиная со второго,для которых есть аналог в оригинальном массиве
+const filterNumbers = function (array,...args) { 
+  console.log('array', array);
+  console.log('args:', args);
+  const uniqueElements = [];
+  // Ищем в любом из массивов
+  for (const element of array) { 
+    if (args.includes(element)) { 
+      uniqueElements.push(element);
+      console.log(`${element} есть везде`);
+    }
+  }
+  return uniqueElements;
 }
-console.log(findLogin(logins, 'a'));
-console.log(findLogin(logins, 'b'));
-console.log(findLogin(logins, 'c'));
-console.log(findLogin(logins,'d'));
+console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8));
+console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15));
+console.log(filterNumbers([100,200,300,400,500],7,12,200,64));
